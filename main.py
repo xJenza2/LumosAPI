@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 
-DATABASE_URL = os.getenv("DATABASE_URL")  # Use environment variable from Render
+DATABASE_URL = os.getenv("postgresql://lumosapi_user:gjD8N76yFr27ECXvMPFS7ReWGWOx6jcV@dpg-cv5f4b2n91rc73aj4n0g-a/lumosapi")  # Use environment variable from Render
 
 def init_db():
     with psycopg2.connect(DATABASE_URL) as conn:
